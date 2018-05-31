@@ -1,0 +1,17 @@
+set history=100
+set ignorecase
+set incsearch
+set smartcase
+
+set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
+    \phistory,fhistory,dirstack,registers,bookmarks
+
+nnoremap c :copy<cr>
+nnoremap m :move<cr>
+nnoremap <C-j> :his<cr>
+
+" Yank current directory path into the clipboard
+nnoremap yd :!echo %d | xclip %i<cr>
+
+" Yank current file path into the clipboard
+nnoremap yf :!echo %c:p | xclip %i<cr>
