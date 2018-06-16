@@ -1,0 +1,67 @@
+" menu utf-8
+source $VIMRUNTIME/delmenu.vim
+set langmenu=ja_jp.utf-8
+source $VIMRUNTIME/menu.vim
+"Show line no
+set nu
+"Show tab
+set showtabline=2
+"color thema
+colorscheme koehler
+" Window width
+set columns=200
+" Window height
+set lines=52
+" Font
+set guifont=MS_Gothic:h9
+"Change color of cursor of IME on/off  　　　　　---j    a
+if has('multi_byte_ime')
+  hi Cursor guifg=bg guibg=Green gui=NONE
+  hi CursorIM guifg=NONE guibg=Purple gui=NONE
+endif
+"hide toolbar
+"set guioptions-=T
+"hide menubar
+"set guioptions-=m
+" Window透過
+gui
+if has('win32')
+  set transparency=210
+else
+  set transparency=20
+endif
+
+highlight SpecialKey term=underline ctermfg=darkgray guifg=darkgray
+"
+"" 全角スペース
+"highlight zenkakuda term=underline ctermbg=blue guibg=#444444
+"call matchadd("zenkakuda", '¥%u3000')
+"" 半角スペース
+"highlight hankakuda term=underline ctermbg=blue guibg=#111111
+"call matchadd("hankakuda", '¥%u0020')
+"
+"if has('win32')
+"" タブ表示
+"set list
+"set listchars=tab:‾‾,trail:-,extends:+,precedes:+,nbsp:%
+"" Show Encoding
+""set statusline=%{expand('%:p:t')}¥ %<¥(%{expand('%:p:h')}¥)%=¥ %m%r%y%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}[%3l,%3c]
+"
+"" Window位置を復元
+"let g:save_window_file = expand('‾/.vimwinpos')
+"augroup SaveWindow
+"  autocmd!
+"  autocmd VimLeavePre * call s:save_window()
+"  function! s:save_window()
+"    let options = [
+"      ¥ 'set columns=' . &columns,
+"      ¥ 'set lines=' . &lines,
+"      ¥ 'winpos ' . getwinposx() . ' ' . getwinposy(),
+"      ¥ ]
+"    call writefile(options, g:save_window_file)
+"  endfunction
+"augroup END
+"if filereadable(g:save_window_file)
+"  execute 'source' g:save_window_file
+"endif
+"endif
