@@ -44,6 +44,9 @@ augroup filetype_as " Actionscript syntax
 augroup END
 au filetype_as BufNewFile,BufRead *.as set filetype=actionscript
 
+" Auto save.
+autocmd InsertLeave * :w
+
 " Junk file
 command! JJ call JJ()
 function! JJ()
