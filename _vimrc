@@ -44,3 +44,12 @@ augroup filetype_as " Actionscript syntax
 augroup END
 au filetype_as BufNewFile,BufRead *.as set filetype=actionscript
 
+" Junk file
+command! JJ call JJ()
+function! JJ()
+  let f = "~/Downloads/" . strftime("%Y%m%d%H%M") . ".txt"
+  execute "redir > " . f
+  execute "e " . f
+  call setline(1,   strftime("%Y/%m/%d"))
+  w
+endfunction
