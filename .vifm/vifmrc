@@ -8,6 +8,7 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 
 nnoremap c :copy<cr>
 nnoremap m :move<cr>
+nnoremap s :sort<cr>
 nnoremap <C-j> :his<cr>
 
 " Yank current directory path into the clipboard
