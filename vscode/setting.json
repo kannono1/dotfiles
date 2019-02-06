@@ -1,0 +1,25 @@
+// 既定の設定を上書きするには、このファイル内に設定を挿入します
+{
+   // 有効にすると、既存のインスタンスを再利用せずに新しいウィンドウでファイルを開きます。
+    "editor.hover": false,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "[actionscript]": {
+        "editor.tabSize": 2
+    },
+    "files.autoSave": "afterDelay",
+    "git.enableSmartCommit": true,
+    "vim.easymotion": true,
+    "vim.easymotionKeys": "asdfjkl;",
+    "vim.leader": "<space>",
+    "vim.smartcase": true,
+    "window.openFilesInNewWindow": false,
+    "window.title": "${activeEditorLong}${separator}${rootName}",
+    "workbench.activityBar.visible": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.editor.enablePreview": false,
+    "editor.hover.enabled": false,
+    "editor.hover.sticky": false,
+    "workbench.sideBar.location": "left",
+}
