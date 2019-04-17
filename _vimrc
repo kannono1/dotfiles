@@ -6,7 +6,7 @@ set fileencodings=iso-2022-jp,utf-8,euc-jp,sjis
 set tabstop=4 "ファイル中の<tab>文字を、見た目で何文字分に展開するかの値
 set shiftwidth=4 "vimが自動で挿入するインデントの値。cindent,autoindentなど
 set softtabstop=0 "キーボードで入力した<tab>で挿入される空白の量。値が0の場合、tabstopの値が適用される。
-set noexpandtab "tabの入力をspaceに置き換える
+set noexpandtab "tabの入力をspaceに置き換えない
 set whichwrap=b,s,<,>,[,] "左右のカーソル移動で行間移動可能にする。
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 set list " TAB, 行末のスペースを表示する
