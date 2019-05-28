@@ -31,11 +31,11 @@
                             { "key_code": "return_or_enter" }
                           ]
                         }
+                        ]
                     },
                     {
                         "description": "Change right_command+hjkl to arrow keys",
                         "manipulators": [
-                        {
                             {
                                 "from": {
                                     "key_code": "h",
@@ -119,9 +119,9 @@
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "f",
+                                    "key_code": "spacebar",
                                     "modifiers": {
-                                        "mandatory": [ "fn" ],
+                                        "mandatory": [ "option" ],
                                         "optional": [ "any" ]
                                     }
                                 },
@@ -134,17 +134,46 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "g",
+                                    "key_code": "j",
                                     "modifiers": {
-                                        "mandatory": [ "fn" ],
+                                        "mandatory": [ "option" ],
                                         "optional": [ "any" ]
                                     }
                                 },
-                                "to": [
-                                    {
-                                        "pointing_button": "button2"
+                                "to": [ { "mouse_key": {"y": 1000} } ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": {
+                                        "mandatory": [ "option" ],
+                                        "optional": [ "any" ]
                                     }
-                                ],
+                                },
+                                "to": [ { "mouse_key": {"y": -1000} } ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "mandatory": [ "option" ],
+                                        "optional": [ "any" ]
+                                    }
+                                },
+                                "to": [ { "mouse_key": {"x": 1000} } ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": {
+                                        "mandatory": [ "option" ],
+                                        "optional": [ "any" ]
+                                    }
+                                },
+                                "to": [ { "mouse_key": {"x": -1000} } ],
                                 "type": "basic"
                             }
                         ]
